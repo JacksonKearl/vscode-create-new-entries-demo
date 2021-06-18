@@ -1,24 +1,24 @@
 {
-  "name": "demo-create-new-entries",
+	"name": "demo-create-new-entries",
 	"publisher": "jakearl",
-  "displayName": "Demo \"Create New\" Entries",
-  "description": "",
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.57.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "onCommand:demo--create-new--entries.helloWorld"
-  ],
-  "main": "./extension.js",
-  "contributes": {
+	"displayName": "Demo \"Create New\" Entries",
+	"description": "",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.57.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:demo--create-new--entries.helloWorld"
+	],
+	"main": "./extension.js",
+	"contributes": {
 		"startEntries": [
 			{
 				"title": "Handy Dandy Notebook",
-				"description": "Create a notebook that can run everything, independantly",
+				"description": "",
 				"category": "notebook",
 				"command": "handydandy-notebook.newNotebook"
 			},
@@ -30,56 +30,77 @@
 			},
 			{
 				"title": "Container Window",
-				"description": "Open a window in a Container",
 				"category": "window",
 				"command": "remote-containers.attachToRunningContainer"
 			},
 			{
-			"title": "SSH Window",
-			"description": "Open a window over SSH",
-			"category": "window",
-			"command": "opensshremotes.openEmptyWindow"
+				"title": "Container Configuration",
+				"category": "configuration",
+				"command": "remote-containers.createDevContainerFile"
+			},
+				{
+				"title": "Sample Language Container",
+				"category": "folder",
+				"command": "remote-containers.trySample"
+			},
+			{
+				"title": "SSH Window",
+				"category": "window",
+				"command": "opensshremotes.openEmptyWindow"
+			},
+			{
+				"title": "SSH Host Configuration",
+				"category": "configuration",
+				"command": "opensshremotes.addNewSshHost"
 			},
 			{
 				"title": "WSL Window",
-				"description": "Open a window in WSL",
 				"category": "window",
 				"command": "remote-wsl.explorer.openDistro"
 			},
 			{
 				"title": "REST Notebook",
-				"description": "Use this notebook to run and save REST queries",
+				"description": "",
 				"category": "notebook",
 				"command": "rest-book.newNotebook"
 			},
 			{
-			"title": "Image",
-			"description": "Create an empty .png file with specificed dimensions",
-			"category": "file",
-			"command": "luna.file.new"
+				"title": "New Image",
+				"description": "",
+				"category": "file",
+				"command": "luna.file.new"
+			},
+			{
+				"title": "New Icon",
+				"description": "",
+				"category": "file",
+				"command": "luna.file.newIcon"
 			}
 		],
-    "commands": [
-      {
-        "command": "demo--create-new--entries.helloWorld",
-        "title": "Hello World"
-      }
-    ]
-  },
-  "scripts": {
-    "lint": "eslint .",
-    "pretest": "npm run lint",
-    "test": "node ./test/runTest.js"
-  },
-  "devDependencies": {
-    "@types/glob": "^7.1.3",
-    "@types/mocha": "^8.0.4",
-    "@types/node": "^12.11.7",
-    "@types/vscode": "^1.57.0",
-    "eslint": "^7.19.0",
-    "glob": "^7.1.6",
-    "mocha": "^8.2.1",
-    "typescript": "^4.1.3",
-    "vscode-test": "^1.5.0"
-  }
+		"commands": [
+			{
+				"command": "demo--create-new--entries.helloWorld",
+				"title": "Hello World"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.57.0",
+		"eslint": "^7.19.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.2.1",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.5.0"
+	},
+	"__metadata": {
+		"installedTimestamp": 1624053912163
+	}
 }
